@@ -1,2 +1,3 @@
-# eslint-config-digznav
+## eslint-config-digznav
+
 Personal eslint configuration.
