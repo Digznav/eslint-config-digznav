@@ -26,15 +26,14 @@
   "main": "index.js",
   "scripts": {
     "eslint:check-rules": "eslint-find-rules --unused",
-    "prepare": "npm run eslint:check-rules",
     "prepublishOnly": "npm run eslint:check-rules && safe-publish-latest",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tape ./test/*.js"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-find-rules": "^3.3.1",
-    "in-publish": "^2.0.0",
-    "safe-publish-latest": "^1.1.2"
+    "safe-publish-latest": "^1.1.2",
+    "tape": "^4.10.2"
   },
   "engines": {
     "node": ">=8",
