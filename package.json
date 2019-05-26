@@ -25,7 +25,9 @@
   "author": "Diego Miguel <digznav@gmail.com> (https://github.com/Digznav)",
   "main": "index.js",
   "scripts": {
-    "prepare": "(in-install || eslint-find-rules --unused) && (not-in-publish || npm test) && safe-publish-latest",
+    "eslint:check-rules": "eslint-find-rules --unused",
+    "prepare": "npm run eslint:check-rules",
+    "prepublishOnly": "npm run eslint:check-rules && safe-publish-latest",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
