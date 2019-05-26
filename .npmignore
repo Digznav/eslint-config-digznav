@@ -1,4 +1,12 @@
+# Folders
+test/
+
+# Config files
 .DS_Store
 .editorconfig
 .nvmrc
+.travis.yml
 jsconfig.json
+
+# Other
+package-lock.json
