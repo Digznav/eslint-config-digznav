@@ -1,0 +1,8 @@
+{
+  "include": [
+    "index.js"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
