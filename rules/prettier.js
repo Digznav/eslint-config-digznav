@@ -6,9 +6,25 @@ module.exports = {
       'error',
       {
         printWidth: 120,
-        tabWidth: 2,
+        tabWidth: 2, // Default
+        useTabs: false, // Default
+        semi: true, // Default
         singleQuote: true,
-        parser: 'babel'
+        quoteProps: 'as-needed', // Default
+        jsxSingleQuote: false, // Default (React)
+        trailingComma: 'none', // Default
+        bracketSpacing: true, // Default
+        jsxBracketSameLine: false, // Default (React)
+        arrowParens: 'avoid', // Default
+        rangeStart: 0, // Default
+        rangeEnd: Infinity, // Default
+        parser: 'babel',
+        filepath: '', // Default
+        requirePragma: false, // Default
+        insertPragma: false, // Default
+        proseWrap: 'preserve', // Default
+        htmlWhitespaceSensitivity: 'css', // Default
+        endOfLine: 'auto' // Default
       }
     ]
   }
