@@ -1,18 +1,9 @@
 module.exports = {
-  extends: ['./rules/all'].map(require.resolve),
-  parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: 'module',
-  },
-  rules: {
-    'no-var': 'off',
-    eqeqeq: 'off',
-    'vars-on-top': 'off',
-    'prefer-arrow-callback': [
-      'error',
-      {
-        allowNamedFunctions: true
-      }
-    ]
-  }
+  extends: [
+    'eslint-config-airbnb-base',
+    './rules/best-practices',
+    './rules/es6',
+    './rules/imports',
+    './rules/prettier'
+  ].map(require.resolve)
 };

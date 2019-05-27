@@ -25,15 +25,35 @@
   "author": "Diego Miguel <digznav@gmail.com> (https://github.com/Digznav)",
   "main": "index.js",
   "scripts": {
-    "eslint:check-rules": "eslint-find-rules --unused",
-    "prepublishOnly": "npm run eslint:check-rules && safe-publish-latest",
+    "lint": "eslint \"**/*.js\"",
+    "lint:config": "eslint --print-config ./index.js",
+    "lint:check-rules": "eslint-find-rules --unused",
+    "prepublishOnly": "npm run lint:check-rules && safe-publish-latest",
     "test": "tape ./test/*.js"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.3.0",
     "eslint-find-rules": "^3.3.1",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "prettier": "^1.17.1",
     "safe-publish-latest": "^1.1.2",
     "tape": "^4.10.2"
+  },
+  "peerDependencies": {
+    "eslint": "^4.19.1 || ^5.3.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-find-rules": "^3.3.1",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "prettier": "^1.17.1"
   },
   "engines": {
     "node": ">=8",
