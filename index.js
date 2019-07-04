@@ -1,9 +1,15 @@
+'use strict';
+
 module.exports = {
   extends: [
-    'eslint-config-airbnb-base',
     './rules/best-practices',
+    './rules/errors',
+    './rules/node',
+    './rules/style',
+    './rules/variables',
     './rules/es6',
     './rules/imports',
+
     './rules/prettier'
   ].map(require.resolve),
   rules: {
@@ -14,6 +20,14 @@ module.exports = {
       {
         allowNamedFunctions: true
       }
-    ]
+    ],
+
+    parserOptions: {
+      ecmaVersion: 2018,
+      sourceType: 'module'
+    },
+
+    // https://eslint.org/docs/rules/strict
+    strict: 'error'
   }
 };

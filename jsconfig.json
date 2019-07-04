@@ -1,6 +1,7 @@
 {
   "include": [
-    "index.js"
+    "index.js",
+    "rules/**/*.js"
   ],
   "exclude": [
     "node_modules"
